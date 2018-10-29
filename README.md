@@ -1,6 +1,6 @@
 # Vogelhaus
 ## Informationen
-Ein kleine Vogelanlockstation für die [Natur AG Bramsche](https://naturagbramsche.blog/)  
+Eine kleine Vogelanlockstation für die [Natur AG Bramsche](https://naturagbramsche.blog/)  
 [Blogartikel]() zu diesem Projekt  
 [Video]() zu diesem Projekt  
 ## Anleitung
