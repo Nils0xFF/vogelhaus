@@ -18,6 +18,26 @@ channels = 2    # 1 is mono, 2 is stereo
 buffer = 2048   # number of buffer samples 
 pg.mixer.init(freq, bitsize, channels, buffer)
 
+# tries to play the given audio file
+def play_audio(music_file):
+    clock = pg.time.Clock()
+    try:
+        pg.mixer.music.load(music_file)
+        print("Music file {} loaded!".format(music_file))
+    except pg.error:
+        print("File {} not found! {}".format(music_file, pg.get_error()))
+        return
+
+    pg.mixer.music.play()
+
+    #fade in to remove cracking
+    for x in range(0,100):
+        pg.mixer.music.set_volume(float(x)/100.0)
+        time.sleep(.0075)
+
+    while pg.mixer.music.get_busy():
+        clock.tick(30)
+
 if len(sys.argv) > 1:
 
     # try to parse the voulume
@@ -41,7 +61,7 @@ if len(sys.argv) > 1:
     audio = None
     for file in os.listdir("../audio"):
         if file.endswith(".mp3"):
-            audio = file
+            audio = "../audio/" + file
     
     if audio != None:
         play_audio(audio)
@@ -50,23 +70,3 @@ if len(sys.argv) > 1:
 
 else:
     print("Please specify volume as a float! (0.0 - 1.0)")
-
-# tries to play the given audio file
-def play_audio(music_file):
-    clock = pg.time.Clock()
-    try:
-        pg.mixer.music.load(music_file)
-        print("Music file {} loaded!".format(music_file))
-    except pg.error:
-        print("File {} not found! {}".format(music_file, pg.get_error()))
-        return
-
-    pg.mixer.music.play()
-
-    #fade in to remove cracking
-    for x in range(0,100):
-        pg.mixer.music.set_volume(float(x)/100.0)
-        time.sleep(.0075)
-
-    while pg.mixer.music.get_busy():
-        clock.tick(30)
