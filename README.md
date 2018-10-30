@@ -30,19 +30,25 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 ---
 #### Breakout/Verstärker
 ##### Zusammenbau
-[Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/assembly)
+siehe [Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/assembly)
 ##### Verkabelung
 - **VIN** an Raspbery **Pi 5V**
 - **GND** an Raspbery **Pi GND**
 - **DIN** an Raspbery **Pi #21**
 - **BCLK** an Raspbery **Pi #18**
 - **LRCLK** an Raspbery **Pi #19**
+Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring)
 ---
-#### RTC Modul
---- 
-[Adafruits Wiring Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring)
+#### RTC Modul (ohne Akku)
+---
+#### SleepyPi (mit Akku)
+---
 ### 3. Einrichtung
+#### Audiowiedergabe
 [Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
+#### Zeiteinstellungen
 ### 4. Software
+#### Funktionsweise
+#### Automatischer Aufruf mit cronjob
 
 
