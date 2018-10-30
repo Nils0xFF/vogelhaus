@@ -50,7 +50,7 @@ if len(sys.argv) > 1:
         pg.mixer.music.stop()
         raise SystemExit
 
-    # logging information
+    # debug information
     print ("Vogelhaus Software gestartet")
     print ("Time: " + str(datetime.now().hour) + ":" + str(datetime.now().minute))
     print("Playing at volume: " + str(user_volume)+ "\n")
