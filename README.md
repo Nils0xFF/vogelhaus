@@ -1,8 +1,8 @@
 # Vogelhaus
 ## Informationen
-Eine kleine Vogelanlockstation für die [Natur AG Bramsche](https://naturagbramsche.blog/)  
-[Blogartikel]() zu diesem Projekt  
-[Video]() zu diesem Projekt  
+Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://naturagbramsche.blog/)  
+[Blogartikel](#) zu diesem Projekt 
+[Video](#) zu diesem Projekt  
 ## Anleitung
 ### 1. Hardware
 ---
@@ -28,12 +28,17 @@ Eine kleine Vogelanlockstation für die [Natur AG Bramsche](https://naturagbrams
 ### 2. Zusammenbau
 #### RTC Modul
 #### Breakout/Verstärker
+##### Zusammenbau
+[Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/assembly)
+##### Verkabelung
 - Vin an Raspbery Pi 5V
 - GND an Raspbery Pi GND
 - DIN an Raspbery Pi #21
 - BCLK an Raspbery Pi #18
 - LRCLK an Raspbery Pi #19
+[Adafruits Wiring Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring)
 ### 3. Einrichtung
+[Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
 ### 4. Software
 
 
