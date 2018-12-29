@@ -36,7 +36,7 @@ siehe [Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2
 - **GND** an Raspbery **Pi GND**
 - **DIN** an Raspbery **Pi #21**
 - **BCLK** an Raspbery **Pi #18**
-- **LRCLK** an Raspbery **Pi #19**
+- **LRCLK** an Raspbery **Pi #19**  
 Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring)
 ---
 #### RTC Modul (ohne Akku)
