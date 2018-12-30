@@ -22,19 +22,19 @@ if [ ! -f "$MYPATH/setup/audio_setup_reboot" ]; then
     # create a flag file to check if we are resuming from reboot.
     sudo touch "$MYPATH/setup/audio_setup_reboot"
     echo "rebooting.."
-    # sudo reboot
+    sudo reboot
 
 else 
     echo "resuming script after reboot.."
   
     # Remove the line that we added in zshrc
-    sed -i '/bash/d' ~/.bashrc 
+    sed -i '/bash.*.setup.sh/d' ~/.bashrc 
     # remove the temporary file that we created to check for reboot
     sudo rm -f "$MYPATH/setup/audio_setup_reboot"
     # Audio Setup part 2
     expect "$MYPATH/setup/audio_setup.exp" 
     rm "$MYPATH/setup/i2samp.sh"
-    # sudo reboot
+    sudo reboot
 fi
 
 
