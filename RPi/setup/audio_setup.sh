@@ -12,7 +12,7 @@ if [ ! -f /var/run/resume-after-reboot ]; then
     chmod u+x audio_setup.exp
     ./audio_setup.exp
     # Preparation for reboot
-    script="bash /audio_setup.sh"
+    script="bash $PWD/audio_setup.sh"
   
     # add this script to zsh so it gets triggered immediately after reboot
     # change it to .bashrc if using bash shell
