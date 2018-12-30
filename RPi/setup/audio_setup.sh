@@ -1,7 +1,6 @@
 #!/bin/bash
-# filename: audio_setup.sh
 
-path = "/home/pi/vogelhaus/RPi"
+path = /home/pi/vogelhaus/RPi
 
 # check if the reboot flag file exists. 
 # We created this file before rebooting.
@@ -26,7 +25,7 @@ if [ ! -f $path/setup/audio_setup_reboot ]; then
 
     echo "rebooting.."
     # reboot here
-    sudo reboot
+    # sudo reboot
 
 else 
     echo "resuming script after reboot.."
@@ -38,11 +37,11 @@ else
     sudo rm -f $path/audio_setup_reboot
 
     # continue with rest of the script
-    ./$path/setup/audio_setup.exp
+    ./$path/setup/audio_setup.exp $path
     rm $path/setup/i2samp.sh
 
     # reboot again
-    sudo reboot
+    # sudo reboot
 fi
 
 
