@@ -45,14 +45,19 @@ Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafr
 ---
 ### 3. Einrichtung
 #### SSH aktivieren
-Befehl `sudo raspi-config` eingeben
-`5. Interfacing Options` auswählen
-`P2 SSH` auswählen und mit Ja bestätigen
+Befehl `sudo raspi-config` eingeben  
+`5. Interfacing Options` auswählen  
+`P2 SSH` auswählen und mit `Yes` bestätigen
+#### Git einrichten
+Git mit `sudo apt-get install git` installieren  
+Repository mit `git clone https://github.com/Nils0xFF/vogelhaus.git` in das user Verzeichniss kopieren
 #### Audiowiedergabe
 [Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
 #### Zeiteinstellungen
 ### 4. Software
 #### Funktionsweise
 #### Automatischer Aufruf mit cronjob
+### 5. Energie sparen
+#### HDMI abschalten
 
 
