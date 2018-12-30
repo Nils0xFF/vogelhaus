@@ -9,7 +9,7 @@ if [ ! -f /var/run/resume-after-reboot ]; then
     # run your scripts here
     curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh >> i2samp.sh
     chmod u+x i2samp.sh
-    ./user_proc.exp
+    ./audio_setup.exp
     # Preparation for reboot
     script="bash /audio_setup.sh"
   
@@ -34,7 +34,7 @@ else
     sudo rm -f /var/run/resume-after-reboot
 
     # continue with rest of the script
-    ./user_proc.exp
+    ./audio_setup.exp
 
     # reboot again
     sudo reboot
