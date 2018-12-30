@@ -36,7 +36,8 @@ else
 
     # continue with rest of the script
     ./audio_setup.exp
-
+    rm i2samp.sh
+    
     # reboot again
     sudo reboot
 fi
