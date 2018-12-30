@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # filename: audio_setup.sh
 
 # check if the reboot flag file exists. 
