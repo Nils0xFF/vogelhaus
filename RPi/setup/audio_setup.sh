@@ -12,7 +12,7 @@ if [ ! -f "$MYPATH/setup/audio_setup_reboot" ]; then
     curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh >> "$MYPATH/setup/i2samp.sh"
     chmod u+x "$MYPATH/setup/i2samp.sh"
     chmod u+x "$MYPATH/setup/audio_setup.exp"
-    expect "$MYPATH/setup/audio_setup.exp" $MYPATH
+    expect "$MYPATH/setup/audio_setup.exp"
 
     # Preparation for reboot
     script="bash $MYPATH/setup/audio_setup.sh"
@@ -32,7 +32,7 @@ else
     # remove the temporary file that we created to check for reboot
     sudo rm -f "$MYPATH/audio_setup_reboot"
     # Audio Setup part 2
-    expect "$MYPATH/setup/audio_setup.exp" $MYPATH
+    expect "$MYPATH/setup/audio_setup.exp" 
     rm "$MYPATH/setup/i2samp.sh"
     # sudo reboot
 fi

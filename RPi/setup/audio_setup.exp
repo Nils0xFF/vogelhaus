@@ -1,7 +1,6 @@
 #!/usr/bin/expect
 set timeout 2
-set path [lindex $argv 0];
-spawn ".$path/setup/i2samp.sh"
+spawn "./i2samp.sh"
 # Assume $remote_server, $my_user_id, $my_password, and $my_command were read in earlier
 expect {Do you wish to continue? [y/N]:}
 # Send the username, and then wait for a password prompt.
