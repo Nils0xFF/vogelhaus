@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MYPATH = "/home/pi/vogelhaus/RPi"
+MYPATH="/home/pi/vogelhaus/RPi"
 
 # check if the reboot flag file exists. 
 # We created this file before rebooting.
