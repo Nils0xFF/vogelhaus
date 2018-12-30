@@ -36,7 +36,7 @@ else
     sudo rm -f "$MYPATH/audio_setup_reboot"
 
     # continue with rest of the script
-    ./"$MYPATH/setup/audio_setup.exp" "$MYPATH"
+    expect "$MYPATH/setup/audio_setup.exp" "$MYPATH"
     rm "$MYPATH/setup/i2samp.sh"
 
     # reboot again
