@@ -7,7 +7,6 @@ MYPATH="/home/pi/vogelhaus/RPi"
 if [ ! -f "$MYPATH/setup/audio_setup_reboot" ]; then
     echo "running script for the first time.."
 
-    # RTC Setup
     # Audio Setup
     curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh >> "$MYPATH/setup/i2samp.sh"
     chmod u+x "$MYPATH/setup/i2samp.sh"
