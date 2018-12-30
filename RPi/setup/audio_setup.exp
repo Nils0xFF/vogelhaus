@@ -1,5 +1,5 @@
 #!/usr/bin/expect
-set timeout 2
+set timeout 5
 spawn "./i2samp.sh"
 # Assume $remote_server, $my_user_id, $my_password, and $my_command were read in earlier
 expect {Do you wish to continue? [y/N]:}
