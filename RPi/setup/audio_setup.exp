@@ -1,16 +1,16 @@
 #!/usr/bin/expect
 spawn "./i2samp.sh"
 # Assume $remote_server, $my_user_id, $my_password, and $my_command were read in earlier
-expect "Do you wish to continue? [y/N]"
+expect "Do you wish to continue? [y/N]:"
 # Send the username, and then wait for a password prompt.
 send "y\r"
-expect "Activate '/dev/zero' playback in background? [RECOMMENDED] [y/N]"
+expect "Activate '/dev/zero' playback in background? [RECOMMENDED] [y/N]:"
 # Send the password, and then wait for a shell prompt.
 send "y\r"
-expect "Do you wish to test your system now? [y/N]"
+expect "Do you wish to test your system now? [y/N]:"
 # Send the prebuilt command, and then wait for another shell prompt.
 send "y\r"
-expect "Would you like to reboot now? [y/N]"
+expect "Would you like to reboot now? [y/N]:"
 # Capture the results of the command into a variable. This can be displayed, or written to disk.
 # Exit the telnet session, and wait for a special end-of-file character.
 send "n\r"
