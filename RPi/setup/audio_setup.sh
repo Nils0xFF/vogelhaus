@@ -11,7 +11,7 @@ if [ ! -f "$MYPATH/setup/audio_setup_reboot" ]; then
     curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh >> "$MYPATH/setup/i2samp.sh"
     chmod u+x "$MYPATH/setup/i2samp.sh"
     chmod u+x "$MYPATH/setup/audio_setup.exp"
-    ."$MYPATH/setup/audio_setup.exp"
+    expect "$MYPATH/setup/audio_setup.exp" "$MYPATH"
     # Preparation for reboot
     script="bash $MYPATH/setup/audio_setup.sh"
   
