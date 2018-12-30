@@ -22,7 +22,7 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 - ~~Netzteil~~
 - ~~RTC Modul~~ (ist im Sleepy Pi verbaut)
 - [Sleepy Pi 2]()
-- [Blei Akku 12V 7Ah]()
+- [Blei Akku 12V 50Ah]()
 - [evtl. Ladegerät für den Akku]()
 - [Flachsteckerkabel]()
 ---
@@ -44,6 +44,10 @@ Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafr
 #### SleepyPi (mit Akku)
 ---
 ### 3. Einrichtung
+#### SSH aktivieren
+Befehl `sudo raspi-config` eingeben
+`5. Interfacing Options` auswählen
+`P2 SSH` auswählen und mit Ja bestätigen
 #### Audiowiedergabe
 [Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
 #### Zeiteinstellungen
