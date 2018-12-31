@@ -70,7 +70,7 @@ Den Pi mit `sudo reboot` neustarten
 #### Funktionsweise
 #### Automatischer Aufruf mit crontab
 minute | hour | dayOfMonth | month | dayOfWeek | command
---- | --- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- | ---
 0 | 6 | * | * | * | python {Pfad zum Script}
 0 | 12 | * | * | * | python {Pfad zum Script}
 0 | 18 | * | * | * | python {Pfad zum Script}
