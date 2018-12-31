@@ -1,7 +1,3 @@
-# Author: Nils Geschwinde
-# Version: 2.0
-# Datum: 21.04.2018
-
 #!/usr/bin/python
 
 # imports
