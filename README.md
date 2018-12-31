@@ -44,19 +44,29 @@ Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafr
 #### SleepyPi (mit Akku)
 ---
 ### 3. Einrichtung
-#### SSH aktivieren
 Befehl `sudo raspi-config` eingeben  
+#### Tastaturlayout ändern (optional)
+`4. Localisation Options` auswählen
+`I3 Change Keyboard Layout` auswählen
+Danach das passende Tastaurlayout auswählen
+#### Passwort ändern (optional)
+`1. Change User Password` auswählen  
+Mit `OK` bestätigen und neues Passwort eingeben
+###Zeitzone ändern
+`4. Localisation Options` auswählen
+`I Change Timezone` auswählen
+Danach die passende Zeitzone auswählen
+#### SSH aktivieren
 `5. Interfacing Options` auswählen  
 `P2 SSH` auswählen und mit `Yes` bestätigen
 #### I2C aktivieren
-Befehl `sudo raspi-config` eingeben  
 `5. Interfacing Options` auswählen  
 `P5 I2C` auswählen und mit `Yes` bestätigen
 #### Git einrichten
 Git mit `sudo apt-get install git` installieren  
 Repository mit `git clone https://github.com/Nils0xFF/vogelhaus.git` in das user Verzeichniss kopieren
 #### Audiowiedergabe
-`./audio_setup.sh` ausführen
+`./audio_setup.sh` ausführen  
 [Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
 #### Zeiteinstellungen
 `sudo nano /etc/rc.local` öffnen  
@@ -68,12 +78,13 @@ vor `exit 0` einfügen
 Den Pi mit `sudo reboot` neustarten
 ### 4. Software
 #### Funktionsweise
+Python Script das alle MP3 Datein aus dem Audio Verzeichis abspielt
 #### Automatischer Aufruf mit crontab
 minute | hour | dayOfMonth | month | dayOfWeek | command
 --- | --- | --- | --- | --- | ---
 0 | 6 | * | * | * | python {Pfad zum Script}
 0 | 12 | * | * | * | python {Pfad zum Script}
-0 | 18 | * | * | * | python {Pfad zum Script}
+0 | 20 | * | * | * | python {Pfad zum Script}
 ### 5. Energie sparen
 #### HDMI abschalten
 
