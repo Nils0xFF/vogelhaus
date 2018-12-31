@@ -7,7 +7,6 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 [Video](#) zu diesem Projekt
 ## Anleitung
 ### 1. Hardware
----
 #### Ohne Akku
 - [Rasperry Pi]()
 - [Adafruit I2S 3W Class D Amplifier Breakout - MAX98357A](https://www.adafruit.com/product/3006)
@@ -17,7 +16,6 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 - [MicroSD - Karte]()
 - [Lautsprecher 4 Ohm 3 Watt]()
 - Ein Gehäuse um die Hardware vor Witterung zu schützen
----
 #### Mit Akku
 - ~~Netzteil~~
 - ~~RTC Modul~~ (ist im Sleepy Pi verbaut)
@@ -25,9 +23,7 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 - [Blei Akku 12V 50Ah]()
 - [evtl. Ladegerät für den Akku]()
 - [Flachsteckerkabel]()
----
 ### 2. Aufbau
----
 #### Breakout/Verstärker
 ##### Zusammenbau
 siehe [Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/assembly)
@@ -38,17 +34,14 @@ siehe [Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2
 - **BCLK** an Raspberry **Pi #18**
 - **LRCLK** an Raspberry **Pi #19**  
 Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring)
----
 #### RTC Modul (ohne Akku)
 - **GND** an Raspberry **Pi GND**
 - **VCC** an Raspberry **Pi 3.3V**
 - **SDA** an Raspberry **Pi #03**  
 - **SCL** an Raspberry **Pi #05**   
 Weitere Informationen: [In diesem Blog](https://www.raspberrypi-spy.co.uk/2015/05/adding-a-ds3231-real-time-clock-to-the-raspberry-pi/)
----
-#### SleepyPi (mit Akku)
+#### SleepyPi (mit Akku)  
 Den SleepyPi einfach du den GPIO Header des RaspberryPi's aufstecken
----
 ### 3. Einrichtung
 Befehl `sudo raspi-config` eingeben  
 #### Tastaturlayout ändern (optional)
