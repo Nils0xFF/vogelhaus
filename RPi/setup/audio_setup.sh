@@ -31,6 +31,7 @@ else
     # remove the temporary file that we created to check for reboot
     sudo rm -f "$MYPATH/setup/audio_setup_reboot"
     # Audio Setup part 2
+    cd "$MYPATH/setup/"
     expect "$MYPATH/setup/audio_setup.exp" 
     rm "$MYPATH/setup/i2samp.sh"
     sudo reboot

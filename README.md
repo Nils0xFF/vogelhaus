@@ -13,7 +13,7 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 - [DS3231 RTC Modul LIR2032]()
 - [Jumper Wires]()
 - [Netzteil]()
-- [MicroSD - Karte]()
+- [MicroSD - Karte]() mit mindestens 4GB Speicher
 - [Lautsprecher 4 Ohm 3 Watt]()
 - Ein Gehäuse um die Hardware vor Witterung zu schützen
 #### Mit Akku
@@ -51,9 +51,9 @@ Danach das passende Tastaurlayout auswählen
 #### Passwort ändern (optional)
 `1. Change User Password` auswählen  
 Mit `OK` bestätigen und neues Passwort eingeben
-###Zeitzone ändern
-`4. Localisation Options` auswählen
-`I Change Timezone` auswählen
+#### Zeitzone ändern
+`4. Localisation Options` auswählen  
+`I2 Change Timezone` auswählen  
 Danach die passende Zeitzone auswählen
 #### SSH aktivieren
 `5. Interfacing Options` auswählen  
@@ -74,22 +74,34 @@ Mit `chmod u+x audio_setup.sh` die Rechte zum ausführen erteilen
 `./audio_setup.sh` ausführen um die Audiokonfiguration zu beenden  
 [Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
 #### Zeiteinstellungen
+`sudo nano /etc/modules` öffen  
+```
+snd-bcm2835
+i2c-bcm2835
+i2c-dev
+rtc-ds1307
+```
+einfügeb und mit CTRL-X, Y und ENTER speichern.  
 `sudo nano /etc/rc.local` öffnen  
 ```
 echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
 hwclock -s
 ```  
-vor `exit 0` einfügen  
+vor `exit 0` einfügen und mit CTRL-X, Y und ENTER speichern.  
 Den Pi mit `sudo reboot` neustarten
 ### 4. Software
 #### Funktionsweise
-Python Script das alle MP3 Datein aus dem Audio Verzeichis abspielt
+Python Script das alle MP3 Datein aus dem Audio Verzeichis abspielt  
+Dieses wird über ein Bash Script aufgerufen
 #### Automatischer Aufruf mit crontab
+Damit crontab das Bash Script aufrufen kann müssen wir dieses zunächst ausführbar machen  
+In das Verzeichnis `vogelhaus/` navigiere
+Mit `chmod u+x run.sh` die Rechte zum ausführen erteilen
 minute | hour | dayOfMonth | month | dayOfWeek | command
 --- | --- | --- | --- | --- | ---
-0 | 6 | * | * | * | python {Pfad zum Script}
-0 | 12 | * | * | * | python {Pfad zum Script}
-0 | 20 | * | * | * | python {Pfad zum Script}
+00 | 06 | * | * | * | bash {Pfad zum Script}
+00 | 12 | * | * | * | bash {Pfad zum Script}
+00 | 20 | * | * | * | bash {Pfad zum Script}
 ### 5. Energie sparen
 #### HDMI abschalten
 
