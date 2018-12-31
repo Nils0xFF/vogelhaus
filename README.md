@@ -32,16 +32,22 @@ Eine kleine Vogelanlockstation im Auftrag der [Natur AG Bramsche](https://natura
 ##### Zusammenbau
 siehe [Adafruits Assembly Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/assembly)
 ##### Verkabelung
-- **VIN** an Raspbery **Pi 5V**
-- **GND** an Raspbery **Pi GND**
-- **DIN** an Raspbery **Pi #21**
-- **BCLK** an Raspbery **Pi #18**
-- **LRCLK** an Raspbery **Pi #19**  
+- **VIN** an Raspberry **Pi 5V**
+- **GND** an Raspberry **Pi GND**
+- **DIN** an Raspberry **Pi #21**
+- **BCLK** an Raspberry **Pi #18**
+- **LRCLK** an Raspberry **Pi #19**  
 Weitere Informationen: [Adafruits Wiring Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-wiring)
 ---
 #### RTC Modul (ohne Akku)
+- **GND** an Raspberry **Pi GND**
+- **VCC** an Raspberry **Pi 3.3V**
+- **SDA** an Raspberry **Pi #03**  
+- **SCL** an Raspberry **Pi #05**   
+Weitere Informationen: [In diesem Blog](https://www.raspberrypi-spy.co.uk/2015/05/adding-a-ds3231-real-time-clock-to-the-raspberry-pi/)
 ---
 #### SleepyPi (mit Akku)
+Den SleepyPi einfach du den GPIO Header des RaspberryPi's aufstecken
 ---
 ### 3. Einrichtung
 Befehl `sudo raspi-config` eingeben  
@@ -65,8 +71,14 @@ Danach die passende Zeitzone auswählen
 #### Git einrichten
 Git mit `sudo apt-get install git` installieren  
 Repository mit `git clone https://github.com/Nils0xFF/vogelhaus.git` in das user Verzeichniss kopieren
+#### Grundsetup
+In das Verzeichnis `vogelhaus/RPi/setup` navigieren  
+Mit `chmod u+x inital_setup.sh` die Rechte zum ausführen erteilen  
+`./inital_setup.sh` ausführen um alle nötigen Pakete zu installieren
 #### Audiowiedergabe
-`./audio_setup.sh` ausführen  
+In das Verzeichnis `vogelhaus/RPi/setup` navigieren  
+Mit `chmod u+x audio_setup.sh` die Rechte zum ausführen erteilen  
+`./audio_setup.sh` ausführen um die Audiokonfiguration zu beenden  
 [Adafruits Installations Guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage)
 #### Zeiteinstellungen
 `sudo nano /etc/rc.local` öffnen  
